@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="BBMS.User" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+   <title><asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder></title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+     <style type="text/css">
+        * { box-sizing: border-box; }
+        body { background:#f3f5fa; font-family:'Segoe UI',sans-serif; margin:0; }
+        .dash-wrapper { display:flex; min-height:100vh; }
+
+        .sidebar { width:250px; min-height:100vh; padding:20px 0; color:#fff; flex-shrink:0; background:#0e4f4a; }
+
+        .sidebar-brand { display:flex; align-items:center; gap:12px; padding:0 22px 22px 22px; border-bottom:1px solid rgba(255,255,255,.12); margin-bottom:15px; }
+        .sidebar-brand .drop { background:#e63946; width:40px; height:40px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; }
+        .sidebar-brand h5 { margin:0; font-weight:700; font-size:16px; color:#fff; }
+        .sidebar-brand small { opacity:.7; letter-spacing:.5px; }
+
+        .sidebar-menu { list-style:none; padding:0 12px; margin:0; }
+        .sidebar-menu li { list-style:none; }
+        .sidebar-menu li a { display:flex; align-items:center; gap:12px; padding:11px 14px; color:#d7dbe6; text-decoration:none; border-radius:8px; margin-bottom:4px; font-size:14.5px; transition:.2s; }
+        .sidebar-menu li a:hover { background:rgba(255,255,255,.08); color:#fff; }
+        .sidebar-menu li a.active { color:#fff; font-weight:600; background:#ffffff22; }
+
+          .main-content { flex:1; padding:28px 32px; }
+        .topbar { display:flex; justify-content:space-between; align-items:center; margin-bottom:22px; }
+        .topbar h3 { margin:0; font-weight:800; color:#0e4f4a; }
+        .topbar .profile-box { display:flex; align-items:center; gap:10px; background:#fff; padding:6px 14px 6px 6px; border-radius:30px; box-shadow:0 2px 8px rgba(0,0,0,.06); }
+        .topbar .profile-box img { width:34px; height:34px; border-radius:50%; object-fit:cover; }
+
+        .stats-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:18px; margin-bottom:26px; }
+        .stat-card { background:#fff; border-radius:14px; padding:18px; display:flex; align-items:flex-start; gap:14px; box-shadow:0 3px 10px rgba(0,0,0,.05); opacity:0; transform:translateY(15px); animation:fadeUp .5s ease forwards; }
+        .stats-row .stat-card:nth-child(1){animation-delay:.05s}
+        .stats-row .stat-card:nth-child(2){animation-delay:.15s}
+        .stats-row .stat-card:nth-child(3){animation-delay:.25s}
+        .stats-row .stat-card:nth-child(4){animation-delay:.35s}
+        .stats-row .stat-card:nth-child(5){animation-delay:.45s}
+        @keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+        .stat-icon { width:46px; height:46px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0; }
+        .icon-blue   { background:#dceaff; color:#2563eb; }
+        .icon-green  { background:#dcf5e3; color:#16a34a; }
+        .icon-red    { background:#fde0e0; color:#e11d48; }
+        .icon-orange { background:#fdf1d0; color:#d97706; }
+        .icon-purple { background:#ece0fb; color:#7c3aed; }
+
+          .stat-card h4 { margin:0; font-size:22px; font-weight:800; color:#1b2333; }
+        .stat-card span.label { font-size:13px; color:#6b7280; }
+        .stat-card a.link { display:block; font-size:12.5px; font-weight:600; margin-top:6px; text-decoration:none; }
+
+        .qa-title { font-weight:700; font-size:17px; margin-bottom:14px; color:#1b2333; }
+        .quick-access { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:16px; }
+        .qa-card { background:#fff; border:1px solid #eef0f4; border-radius:12px; padding:22px 10px; text-align:center; text-decoration:none; color:#1b2333; font-weight:600; font-size:14px; transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+        .qa-card i { display:block; font-size:24px; margin-bottom:10px; }
+        .qa-card:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,.08); border-color:transparent; }
+
+        .badge { padding:4px 10px; border-radius:20px; font-size:12px; font-weight:600; display:inline-block; }
+        .badge-group    { background:#fde0e0; color:#e11d48; font-weight:700; }
+        .badge-approved { background:#dcf5e3; color:#16a34a; }
+        .badge-rejected { background:#fde0e0; color:#e11d48; }
+        .badge-pending  { background:#fdf1d0; color:#d97706; }
+          </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
