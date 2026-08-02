@@ -16,7 +16,7 @@
         </div>
         <ul class="sidebar-menu">
             <li><a href="DonorDashboard.aspx" class="active"><i class="bi bi-grid-fill"></i> Dashboard</a></li>
-            <li><a href="DonorUpdateProfile.aspx"><i class="bi bi-person"></i> Update Profile</a></li>
+            <li><a href="DonorUpdateProfile.aspx"><i class="bi bi-person"></i> Donar Update Profile</a></li>
             <li><a href="DonateBlood.aspx"><i class="bi bi-droplet-half"></i> Donate Blood</a></li>
             <li><a href="DonorHistory.aspx"><i class="bi bi-clock-history"></i> View Donation History</a></li>
             <li><a href="DonorEligibility.aspx"><i class="bi bi-calendar-check"></i> View Donation Eligibility</a></li>

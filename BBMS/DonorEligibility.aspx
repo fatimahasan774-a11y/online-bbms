@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Donar.Master" AutoEventWireup="true" CodeBehind="DonorEligibility.aspx.cs" Inherits="BBMS.DonorEligibility" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"> Donar Eligibility
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-  
+   
 
 <div class="dash-wrapper theme-donor">
     <div class="sidebar">
@@ -17,7 +17,7 @@
             <li><a href="DonorHistory.aspx"><i class="bi bi-clock-history"></i> View Donation History</a></li>
             <li><a href="DonorEligibility.aspx" class="active"><i class="bi bi-calendar-check"></i> View Donation Eligibility</a></li>
             <li><a href="DonorNotifications.aspx"><i class="bi bi-bell"></i> Donation Notifications</a></li>
-            <li><a href="Login.aspx"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+            <li><a href="Logout.aspx"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
         </ul>
     </div>
 
@@ -29,13 +29,13 @@
 
         <div style="background:#fff; border-radius:14px; padding:30px; box-shadow:0 3px 10px rgba(0,0,0,.05); max-width:560px; text-align:center;">
             <i class="bi bi-check-circle-fill" style="font-size:52px; color:#16a34a;"></i>
-            <h3 style="color:#16a34a; margin:14px 0 6px;">Waad u qalantaa deeqda dhiigga!</h3>
-            <p style="color:#6b7280; margin:0 0 20px;">Deeqdaadii ugu dambeysay: <strong>12 May 2026</strong> — waqtigu wuu dhamaaday (3+ bilood).</p>
+            <h3 style="color:#16a34a; margin:14px 0 6px;">You are eligible to donate!</h3>
+            <p style="color:#6b7280; margin:0 0 20px;">Your last donation: <strong>12 May 2026</strong> — the waiting period (3+ months) has passed.</p>
 
             <div style="display:flex; justify-content:space-between; text-align:left; background:#f3f5fa; border-radius:10px; padding:14px 18px;">
                 <div>
-                    <div style="font-size:12px; color:#6b7280;">Deeqda xigta la fasaxay</div>
-                    <div style="font-weight:700; color:#3a1f5d;">Maanta</div>
+                    <div style="font-size:12px; color:#6b7280;">Next Eligible Date</div>
+                    <div style="font-weight:700; color:#3a1f5d;">Today</div>
                 </div>
                 <div>
                     <div style="font-size:12px; color:#6b7280;">Weight Requirement</div>
@@ -54,5 +54,5 @@
     </div>
 </div>
 
-</asp:Content>
 
+</asp:Content>

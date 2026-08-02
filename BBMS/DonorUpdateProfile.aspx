@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Donar.Master" AutoEventWireup="true" CodeBehind="DonorUpdateProfile.aspx.cs" Inherits="BBMS.DonorUpdateProfile" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"> Update Profile -Donar
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
   
@@ -12,12 +12,12 @@
         </div>
         <ul class="sidebar-menu">
             <li><a href="DonorDashboard.aspx"><i class="bi bi-grid-fill"></i> Dashboard</a></li>
-            <li><a href="DonorUpdateProfile.aspx" class="active"><i class="bi bi-person"></i> Update Profile</a></li>
+            <li><a href="DonorUpdateProfile.aspx" class="active"><i class="bi bi-person"></i> Donar Update Profile</a></li>
             <li><a href="DonateBlood.aspx"><i class="bi bi-droplet-half"></i> Donate Blood</a></li>
             <li><a href="DonorHistory.aspx"><i class="bi bi-clock-history"></i> View Donation History</a></li>
             <li><a href="DonorEligibility.aspx"><i class="bi bi-calendar-check"></i> View Donation Eligibility</a></li>
             <li><a href="DonorNotifications.aspx"><i class="bi bi-bell"></i> Donation Notifications</a></li>
-            <li><a href="Login.aspx"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+            <li><a href="Logout.aspx"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
         </ul>
     </div>
 
@@ -32,7 +32,7 @@
                 <img src="https://i.pravatar.cc/100?img=47" style="width:70px; height:70px; border-radius:50%; object-fit:cover;" />
                 <div>
                     <div style="font-weight:700; font-size:16px; color:#3a1f5d;">Update your info</div>
-                    <div style="color:#6b7280; font-size:13px;">Xogtaadu waxay caawinaysaa Blood Bank-ka in ay kula soo xiriiraan</div>
+                    <div style="color:#6b7280; font-size:13px;">Your details help the Blood Bank reach you quickly.</div>
                 </div>
             </div>
 
@@ -47,6 +47,10 @@
             <div style="margin-bottom:14px;">
                 <label style="font-size:13px; font-weight:600; color:#6b7280;">Phone</label><br />
                 <asp:TextBox ID="txtPhone" runat="server" Text="06XXXXXXXX" style="width:100%; padding:9px; border:1px solid #e5e7eb; border-radius:8px; margin-top:5px;" />
+            </div>
+            <div style="margin-bottom:14px;">
+                <label style="font-size:13px; font-weight:600; color:#6b7280;">Weight (kg)</label><br />
+                <asp:TextBox ID="txtWeight" runat="server" TextMode="Number" style="width:100%; padding:9px; border:1px solid #e5e7eb; border-radius:8px; margin-top:5px;" />
             </div>
             <div style="margin-bottom:18px;">
                 <label style="font-size:13px; font-weight:600; color:#6b7280;">Blood Group</label><br />
@@ -65,5 +69,6 @@
     </div>
 </div>
 
-</asp:Content>
 
+
+</asp:Content>

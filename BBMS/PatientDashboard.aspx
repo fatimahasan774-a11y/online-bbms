@@ -16,7 +16,7 @@
         </div>
         <ul class="sidebar-menu">
             <li><a href="PatientDashboard.aspx" class="active"><i class="bi bi-grid-fill"></i> Dashboard</a></li>
-            <li><a href="UpdateProfile.aspx"><i class="bi bi-person"></i> Update Profile</a></li>
+            <li><a href="UpdateProfile.aspx"><i class="bi bi-person"></i> User Update Profile</a></li>
             <li><a href="RegisterAsDonor.aspx"><i class="bi bi-heart"></i> Register as Donor</a></li>
             <li><a href="SearchBloodGroup.aspx"><i class="bi bi-search"></i> Search Blood Group</a></li>
             <li><a href="RequestBlood.aspx"><i class="bi bi-clipboard-plus"></i> Request Blood</a></li>

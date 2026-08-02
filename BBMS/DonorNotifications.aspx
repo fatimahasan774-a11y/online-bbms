@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Donar.Master" AutoEventWireup="true" CodeBehind="DonorNotifications.aspx.cs" Inherits="BBMS.DonorNotifications" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">Donar Notification
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-   
 
+   
 <div class="dash-wrapper theme-donor">
     <div class="sidebar">
         <div class="sidebar-brand">
@@ -17,7 +17,7 @@
             <li><a href="DonorHistory.aspx"><i class="bi bi-clock-history"></i> View Donation History</a></li>
             <li><a href="DonorEligibility.aspx"><i class="bi bi-calendar-check"></i> View Donation Eligibility</a></li>
             <li><a href="DonorNotifications.aspx" class="active"><i class="bi bi-bell"></i> Donation Notifications</a></li>
-            <li><a href="Login.aspx"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+            <li><a href="Logout.aspx"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
         </ul>
     </div>
 
@@ -44,5 +44,5 @@
     </div>
 </div>
 
-</asp:Content>
 
+</asp:Content>

@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Donar.Master" AutoEventWireup="true" CodeBehind="DonateBlood.aspx.cs" Inherits="BBMS.DonateBlood" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">Donar Blood
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
    
@@ -17,7 +17,7 @@
             <li><a href="DonorHistory.aspx"><i class="bi bi-clock-history"></i> View Donation History</a></li>
             <li><a href="DonorEligibility.aspx"><i class="bi bi-calendar-check"></i> View Donation Eligibility</a></li>
             <li><a href="DonorNotifications.aspx"><i class="bi bi-bell"></i> Donation Notifications</a></li>
-            <li><a href="Login.aspx"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+            <li><a href="Logout.aspx"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
         </ul>
     </div>
 
@@ -31,7 +31,7 @@
 
             <div style="display:flex; align-items:center; gap:14px; margin-bottom:20px; background:#f2ecfb; padding:14px 16px; border-radius:10px;">
                 <i class="bi bi-droplet-half" style="font-size:26px; color:#3a1f5d;"></i>
-                <div style="font-size:13.5px; color:#3a1f5d;">Dooro taariikhda iyo goobta aad rabto in aad ku deeqdo dhiig. Blood Bank-ku wuu kula soo xiriiri doonaa si loo xaqiijiyo.</div>
+                <div style="font-size:13.5px; color:#3a1f5d;">Choose a date and location to donate blood. The Blood Bank will contact you to confirm.</div>
             </div>
 
             <div style="margin-bottom:14px;">
@@ -42,14 +42,14 @@
             <div style="margin-bottom:14px;">
                 <label style="font-size:13px; font-weight:600; color:#6b7280;">Donation Center</label><br />
                 <asp:DropDownList ID="ddlCenter" runat="server" style="width:100%; padding:9px; border:1px solid #e5e7eb; border-radius:8px; margin-top:5px;">
-                    <asp:ListItem Text="Central Blood Bank - Xamar Weyne" />
+                    <asp:ListItem Text="Central Blood Bank" />
                     <asp:ListItem Text="Banadir Hospital Bank" />
                     <asp:ListItem Text="Digfer Blood Center" />
                 </asp:DropDownList>
             </div>
 
             <div style="margin-bottom:18px;">
-                <label style="font-size:13px; font-weight:600; color:#6b7280;">Notes (ikhtiyaari)</label><br />
+                <label style="font-size:13px; font-weight:600; color:#6b7280;">Notes (optional)</label><br />
                 <asp:TextBox ID="txtNotes" runat="server" TextMode="MultiLine" Rows="3" style="width:100%; padding:9px; border:1px solid #e5e7eb; border-radius:8px; margin-top:5px;" />
             </div>
 
@@ -60,5 +60,5 @@
     </div>
 </div>
 
-</asp:Content>
 
+</asp:Content>

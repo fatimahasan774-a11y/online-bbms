@@ -7,16 +7,17 @@ using System.Web.UI.WebControls;
 
 namespace BBMS
 {
-    public partial class DonorUpdateProfile : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
+	public partial class DonorUpdateProfile : System.Web.UI.Page
+	{
+		protected void Page_Load(object sender, EventArgs e)
+		{
+          
 
         }
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-            lblMsg.Text = "Profile-kaaga waa la cusboonaysiiyay ✔";
+            lblMsg.Text = "Your profile has been updated successfully.";
             lblMsg.ForeColor = System.Drawing.Color.FromArgb(22, 163, 74);
         }
     }
