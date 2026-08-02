@@ -3,9 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
   
-
 <div class="dash-wrapper theme-user">
-
     <!-- SIDEBAR -->
     <div class="sidebar">
         <div class="sidebar-brand">
@@ -72,13 +70,13 @@
                     <asp:ListItem Text="O+" /><asp:ListItem Text="O-" />
                 </asp:DropDownList>
             </div>
-            <asp:Button ID="btnUpdate" runat="server" Text="Save Change"  OnClick="Button1_Click"
+             
+            <asp:Button ID="btnUpdate" runat="server" Text="Save Change" OnClick="btnUpdate_Click"
              style="background:#0e4f4a; color:#fff; border:none; padding:11px 22px; border-radius:8px; font-weight:600; cursor:pointer; width:100%;" />
 
             <asp:Label ID="lblMsg" runat="server" style="display:block; margin-top:12px; font-weight:600;" />
         </div>
     </div>
 </div>
-
 
 </asp:Content>

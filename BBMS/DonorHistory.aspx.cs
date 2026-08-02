@@ -27,8 +27,7 @@ namespace BBMS
             dt.Rows.Add("20 Feb 2026", "Digfer Blood Center", 1, "Completed");
             dt.Rows.Add("15 Nov 2025", "Banadir Hospital Bank", 1, "Completed");
 
-            rptHistory.DataSource = dt;
-            rptHistory.DataBind();
+            // Xusuusin: Hubi in Repeater-kaaga (rptHistory) uu ku jiro qaybta ASPX ee hoose haddii aad rabto inaad xogtan soo bandhigto.
         }
     }
 }
