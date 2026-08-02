@@ -18,7 +18,7 @@
         <ul class="sidebar-menu">
             <li><a href="AdminDashboard.aspx" class="active"><i class="bi bi-grid-fill"></i> Dashboard</a></li>
             <li><a href="ManageUsers.aspx"><i class="bi bi-people"></i> Manage Users</a></li>
-            <li><a href="DonorManagement.aspx"><i class="bi bi-person-badge"></i> Manage Donors</a></li>
+           <li><a href="DonorManagement.aspx"><i class="bi bi-person-badge"></i> Manage Donors</a></li>
             <li><a href="AddBloodGroup.aspx"><i class="bi bi-droplet"></i> Add Blood Group</a></li>
             <li><a href="BloodInventory.aspx"><i class="bi bi-briefcase"></i> Manage Blood Stock</a></li>
             <li><a href="BloodRequests.aspx"><i class="bi bi-clipboard-data"></i> View Blood Requests</a></li>

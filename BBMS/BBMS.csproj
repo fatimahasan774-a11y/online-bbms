@@ -76,6 +76,7 @@
     <Content Include="DonorDashboard.aspx" />
     <Content Include="DonorEligibility.aspx" />
     <Content Include="DonorHistory.aspx" />
+    <Content Include="DonorManagement.aspx" />
     <Content Include="DonorNotifications.aspx" />
     <Content Include="DonorUpdateProfile.aspx" />
     <Content Include="Global.asax" />
@@ -192,6 +193,13 @@
     </Compile>
     <Compile Include="DonorHistory.aspx.designer.cs">
       <DependentUpon>DonorHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DonorManagement.aspx.cs">
+      <DependentUpon>DonorManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DonorManagement.aspx.designer.cs">
+      <DependentUpon>DonorManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="DonorNotifications.aspx.cs">
       <DependentUpon>DonorNotifications.aspx</DependentUpon>
