@@ -11,7 +11,18 @@ namespace BBMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Hubi in qofku soo galay iyo in doorkiisu yahay Donor
+            if (Session["LoggedIn"] == null || Session["Role"] == null || Session["Role"].ToString() != "Donor")
+            {
+                // Haddii uusan ahayn Donor ama uusan soo gelin, dib ugu celi bogga Login-ka
+                Response.Redirect("login.aspx");
+                return;
+            }
 
+            if (!IsPostBack)
+            {
+                // Halkan ku qor koodhka ku soo bandhigaya xogta Donor-ka (Tusaale: Taariikhda uu dhiig bixiyay, codsiyada, iwm.)
+            }
         }
     }
 }

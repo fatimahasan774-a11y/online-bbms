@@ -1,5 +1,7 @@
 ﻿using System;
-using System.Web.Security;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace BBMS
@@ -10,55 +12,91 @@ namespace BBMS
         {
             if (!IsPostBack)
             {
-                HighlightRole("Admin");
+                // Bogga markuu marka hore soo dhaco
+                // Default ahaan waxaan u dhigaynaa Admin ama User haddii loo baahdo
+                if (string.IsNullOrEmpty(hidSelectedRole.Value))
+                {
+                    hidSelectedRole.Value = "Admin";
+                }
             }
         }
 
+        // Shaqada qabanaysa markaad gujiso badhannada Role-ka (Admin, User, Donor)
         protected void RoleTab_Click(object sender, EventArgs e)
         {
             LinkButton btn = (LinkButton)sender;
-            hidSelectedRole.Value = btn.CommandArgument;
-            HighlightRole(btn.CommandArgument);
+            string selectedRole = btn.CommandArgument;
+
+            // Ku kaydi HiddenField-ka
+            hidSelectedRole.Value = selectedRole;
         }
-        private void HighlightRole(string role)
-        {
-            hidSelectedRole.Value = role;
-
-            btnRoleAdmin.Style["background"] = role == "Admin" ? "#172a4f" : "#f3f5fa";
-            btnRoleAdmin.Style["color"] = role == "Admin" ? "#fff" : "#172a4f";
-
-            btnRoleUser.Style["background"] = role == "User" ? "#0e4f4a" : "#f3f5fa";
-            btnRoleUser.Style["color"] = role == "User" ? "#fff" : "#0e4f4a";
-
-            btnRoleDonor.Style["background"] = role == "Donor" ? "#3a1f5d" : "#f3f5fa";
-            btnRoleDonor.Style["color"] = role == "Donor" ? "#fff" : "#3a1f5d";
-        }
-
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
             {
-                lblError.Text = "Please enter your email/username and password.";
+                lblError.Text = "Fadlan geli email-ka iyo password-ka.";
                 return;
             }
 
-            // TODO: connect to database later
-            Session["Username"] = txtUsername.Text;
-            Session["Role"] = hidSelectedRole.Value;
-            Session["LoggedIn"] = true;
+            string email = txtUsername.Text.Trim();
+            string password = txtPassword.Text.Trim();
+            string selectedRole = hidSelectedRole.Value;
 
-            switch (hidSelectedRole.Value)
+            string connString = ConfigurationManager.ConnectionStrings["BloodBankDB"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(connString))
             {
-                case "Admin":
-                    Response.Redirect("AdminDashboard.aspx");
-                    break;
-                case "User":
-                    Response.Redirect("PatientDashboard.aspx");
-                    break;
-                case "Donor":
-                    Response.Redirect("DonorDashboard.aspx");
-                    break;
+                string query = "SELECT * FROM Users WHERE Email = @Email AND Role = @Role";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Role", selectedRole);
+
+                    try
+                    {
+                        conn.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string dbPassword = reader["Password"].ToString();
+
+                                if (password == dbPassword)
+                                {
+                                    Session["Username"] = email;
+                                    Session["Role"] = selectedRole;
+                                    Session["LoggedIn"] = true;
+
+                                    switch (selectedRole)
+                                    {
+                                        case "Admin":
+                                            Response.Redirect("AdminDashboard.aspx");
+                                            break;
+                                        case "User":
+                                            Response.Redirect("PatientDashboard.aspx");
+                                            break;
+                                        case "Donor":
+                                            Response.Redirect("DonorDashboard.aspx");
+                                            break;
+                                    }
+                                }
+                                else
+                                {
+                                    lblError.Text =  "Invalid email or password!";
+                                }
+                            }
+                            else
+                            {
+                                lblError.Text = "Email ama Password-ka waa qalad!";
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        lblError.Text = "Cillad ayaa dhacday: " + ex.Message;
+                    }
+                }
             }
         }
     }
