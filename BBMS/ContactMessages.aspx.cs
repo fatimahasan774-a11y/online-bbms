@@ -26,10 +26,9 @@ namespace BBMS
             dt.Columns.Add("Message");
             dt.Columns.Add("Date");
 
-            dt.Rows.Add("Nadiifo Xasan", "nadiifo@example.com", "Ma jira blood group O- oo aad heli karto degdeg ah?", "25 Jul 2026");
-            dt.Rows.Add("Sharmarke Cali", "sharmarke@example.com", "Waxaan rabaa inaan noqdo donor, sidee ku bilaabaa?", "24 Jul 2026");
-            dt.Rows.Add("Ifrah Maxamed", "ifrah@example.com", "Ma dhici karaan appointment-ka waqti kale?", "22 Jul 2026");
-
+            dt.Rows.Add("Nadiifo Hassan", "nadiifo@example.com", "Is O- blood available urgently at your center?", "25 Jul 2026");
+            dt.Rows.Add("Sharmarke Ali", "sharmarke@example.com", "I want to become a donor. How do I get started?", "24 Jul 2026");
+            dt.Rows.Add("Ifrah Mohamed", "ifrah@example.com", "Can I reschedule my donation appointment?", "22 Jul 2026");
             rptMessages.DataSource = dt;
             rptMessages.DataBind();
         }

@@ -2,8 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-   
-
+    
 <div class="dash-wrapper theme-user">
 
     <!-- SIDEBAR -->
@@ -56,13 +55,17 @@
                             <tr style="border-bottom:1px solid #f4f5f7;">
                                 <td style="padding:12px;"><%# Container.ItemIndex + 1 %></td>
                                 <td style="padding:12px;">
-                                    <span class="badge badge-group"><%# Eval("Group") %></span>
+                                    <span class="badge badge-group" style="padding:4px 10px; background:#fee2e2; color:#991b1b; border-radius:6px; font-weight:600;"><%# Eval("BloodGroup") %></span>
                                 </td>
                                 <td style="padding:12px;"><%# Eval("Units") %></td>
-                                <td style="padding:12px;"><%# Eval("Hospital") %></td>
-                                <td style="padding:12px; color:#6b7280;"><%# Eval("Date") %></td>
+                                <td style="padding:12px;"><%# Eval("HospitalLocation") %></td>
+                                <td style="padding:12px; color:#6b7280;"><%# Eval("RequestDate", "{0:dd MMM yyyy}") %></td>
                                 <td style="padding:12px;">
-                                    <span class='<%# GetStatusClass(Eval("Status").ToString()) %>'><%# Eval("Status") %></span>
+                                    <span style="padding:4px 12px; border-radius:20px; font-size:12px; font-weight:600; 
+                                          background-color: <%# Eval("Status").ToString() == "Approved" ? "#d1fae5" : (Eval("Status").ToString() == "Rejected" ? "#fee2e2" : "#fef3c7") %>; 
+                                          color: <%# Eval("Status").ToString() == "Approved" ? "#065f46" : (Eval("Status").ToString() == "Rejected" ? "#991b1b" : "#92400e") %>;">
+                                        <%# Eval("Status") %>
+                                    </span>
                                 </td>
                             </tr>
                         </ItemTemplate>
@@ -72,6 +75,5 @@
         </div>
     </div>
 </div>
-
 
 </asp:Content>

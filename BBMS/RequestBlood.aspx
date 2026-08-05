@@ -40,6 +40,15 @@
 
         <div style="background:#fff; border-radius:14px; padding:24px; box-shadow:0 3px 10px rgba(0,0,0,.05); max-width:600px;">
 
+            <!-- Request Type Dropdown (Individual ama Hospital) -->
+            <div style="margin-bottom:14px;">
+                <label style="font-size:13px; font-weight:600; color:#6b7280;">Request Type (Nooca Codsadaha)</label><br />
+                <asp:DropDownList ID="ddlRequestType" runat="server" style="width:100%; padding:9px; border:1px solid #e5e7eb; border-radius:8px; margin-top:5px;">
+                    <asp:ListItem Text="Individual (Qof Caadi ah)" Value="Individual" />
+                    <asp:ListItem Text="Hospital (Isbitaal)" Value="Hospital" />
+                </asp:DropDownList>
+            </div>
+
             <div style="margin-bottom:14px;">
                 <label style="font-size:13px; font-weight:600; color:#6b7280;">Blood Group Needed</label><br />
                 <asp:DropDownList ID="ddlGroup" runat="server" style="width:100%; padding:9px; border:1px solid #e5e7eb; border-radius:8px; margin-top:5px;">
@@ -73,13 +82,12 @@
                 <label style="font-size:13px; font-weight:600; color:#6b7280;">Additional Notes</label><br />
                 <asp:TextBox ID="txtNotes" runat="server" TextMode="MultiLine" Rows="3" style="width:100%; padding:9px; border:1px solid #e5e7eb; border-radius:8px; margin-top:5px;" />
             </div>
+            
             <asp:Button ID="btnSubmit" runat="server" Text="Submit Request" OnClick="btnSubmit_Click"   style="background:#0e4f4a; color:#fff; border:none; padding:11px 22px; border-radius:8px; font-weight:600; cursor:pointer; width:100%;"  />
-
 
             <asp:Label ID="lblMsg" runat="server" style="display:block; margin-top:12px; font-weight:600;" />
         </div>
     </div>
 </div>
-
 
 </asp:Content>
