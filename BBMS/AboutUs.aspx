@@ -77,37 +77,53 @@
     </div>
 </div>
 
-<!-- ===== CORE VALUES SECTION ===== -->
-<div class="values-section" style="padding:80px 32px; background:#fff;">
+<!-- ===== CORE VALUES SECTION (BURGUNDY BACKGROUND & NAVY BLUE CARDS WITH IMAGES 5-8) ===== -->
+<div class="values-section" style="padding:80px 32px; background:linear-gradient(135deg, #3d0a10, #5c1018);">
     <div class="role-heading" style="max-width:1180px; margin:0 auto 40px; text-align:center;">
-        <span style="font-size:12px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:#e11d2e;">What Drives Us</span>
-        <h2 style="font-family:'Poppins',sans-serif; font-size:30px; font-weight:800; color:#1b2333; margin-top:6px;">Our Core Values</h2>
+        <span style="font-size:12px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:#ffccd5;">What Drives Us</span>
+        <h2 style="font-family:'Poppins',sans-serif; font-size:30px; font-weight:800; color:#ffffff; margin-top:6px;">Our Core Values</h2>
     </div>
 
     <div class="values-grid" style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(4, 1fr); gap:24px;">
         
-        <div class="value-card" style="background:#fff; border:1px solid #eef0f4; border-radius:16px; padding:28px 22px; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
-            <div class="value-icon" style="width:48px; height:48px; border-radius:12px; background:#fde8e8; color:#e11d2e; display:flex; align-items:center; justify-content:center; font-size:20px; margin-bottom:18px;"><i class="bi bi-heart-fill"></i></div>
-            <h3 style="font-family:'Poppins',sans-serif; font-size:17px; font-weight:700; margin-bottom:8px; color:#1b2333;">Compassion</h3>
-            <p style="font-size:13.5px; color:#6b7280; line-height:1.6; margin:0;">Every donor and patient is treated with dignity, care, and utmost respect.</p>
+        <div class="value-card" style="background:#0d1b2a; border:1px solid #1b263b; border-radius:16px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.2);">
+            <div style="height:140px; overflow:hidden;">
+                <img src="images/image5.jpg" alt="Compassion" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            <div style="padding:22px;">
+                <h3 style="font-family:'Poppins',sans-serif; font-size:17px; font-weight:700; margin-bottom:8px; color:#ffffff;">Compassion</h3>
+                <p style="font-size:13.5px; color:#e0e1dd; line-height:1.6; margin:0;">Every donor and patient is treated with dignity, care, and utmost respect.</p>
+            </div>
         </div>
 
-        <div class="value-card" style="background:#fff; border:1px solid #eef0f4; border-radius:16px; padding:28px 22px; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
-            <div class="value-icon" style="width:48px; height:48px; border-radius:12px; background:#fde8e8; color:#e11d2e; display:flex; align-items:center; justify-content:center; font-size:20px; margin-bottom:18px;"><i class="bi bi-shield-fill-check"></i></div>
-            <h3 style="font-family:'Poppins',sans-serif; font-size:17px; font-weight:700; margin-bottom:8px; color:#1b2333;">Safety</h3>
-            <p style="font-size:13.5px; color:#6b7280; line-height:1.6; margin:0;">Strict screening and handling procedures protect every single donation.</p>
+        <div class="value-card" style="background:#0d1b2a; border:1px solid #1b263b; border-radius:16px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.2);">
+            <div style="height:140px; overflow:hidden;">
+                <img src="images/image6.jpg" alt="Safety" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            <div style="padding:22px;">
+                <h3 style="font-family:'Poppins',sans-serif; font-size:17px; font-weight:700; margin-bottom:8px; color:#ffffff;">Safety</h3>
+                <p style="font-size:13.5px; color:#e0e1dd; line-height:1.6; margin:0;">Strict screening and handling procedures protect every single donation.</p>
+            </div>
         </div>
 
-        <div class="value-card" style="background:#fff; border:1px solid #eef0f4; border-radius:16px; padding:28px 22px; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
-            <div class="value-icon" style="width:48px; height:48px; border-radius:12px; background:#fde8e8; color:#e11d2e; display:flex; align-items:center; justify-content:center; font-size:20px; margin-bottom:18px;"><i class="bi bi-lightning-fill"></i></div>
-            <h3 style="font-family:'Poppins',sans-serif; font-size:17px; font-weight:700; margin-bottom:8px; color:#1b2333;">Speed</h3>
-            <p style="font-size:13.5px; color:#6b7280; line-height:1.6; margin:0;">We move quickly when every minute counts for a patient in critical need.</p>
+        <div class="value-card" style="background:#0d1b2a; border:1px solid #1b263b; border-radius:16px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.2);">
+            <div style="height:140px; overflow:hidden;">
+                <img src="images/image7.jpg" alt="Speed" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            <div style="padding:22px;">
+                <h3 style="font-family:'Poppins',sans-serif; font-size:17px; font-weight:700; margin-bottom:8px; color:#ffffff;">Speed</h3>
+                <p style="font-size:13.5px; color:#e0e1dd; line-height:1.6; margin:0;">We move quickly when every minute counts for a patient in critical need.</p>
+            </div>
         </div>
 
-        <div class="value-card" style="background:#fff; border:1px solid #eef0f4; border-radius:16px; padding:28px 22px; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
-            <div class="value-icon" style="width:48px; height:48px; border-radius:12px; background:#fde8e8; color:#e11d2e; display:flex; align-items:center; justify-content:center; font-size:20px; margin-bottom:18px;"><i class="bi bi-people-fill"></i></div>
-            <h3 style="font-family:'Poppins',sans-serif; font-size:17px; font-weight:700; margin-bottom:8px; color:#1b2333;">Community</h3>
-            <p style="font-size:13.5px; color:#6b7280; line-height:1.6; margin:0;">A growing network of generous donors who always show up for neighbors.</p>
+        <div class="value-card" style="background:#0d1b2a; border:1px solid #1b263b; border-radius:16px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.2);">
+            <div style="height:140px; overflow:hidden;">
+                <img src="images/image8.jpg" alt="Community" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            <div style="padding:22px;">
+                <h3 style="font-family:'Poppins',sans-serif; font-size:17px; font-weight:700; margin-bottom:8px; color:#ffffff;">Community</h3>
+                <p style="font-size:13.5px; color:#e0e1dd; line-height:1.6; margin:0;">A growing network of generous donors who always show up for neighbors.</p>
+            </div>
         </div>
 
     </div>
