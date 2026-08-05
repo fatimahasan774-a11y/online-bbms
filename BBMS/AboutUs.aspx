@@ -1,86 +1,131 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomePage.Master" AutoEventWireup="true" CodeBehind="AboutUs.aspx.cs" Inherits="BBMS.AboutUs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+    About Us - Blood Bank Management System
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-  
 
-<div class="page-header">
-    <div class="page-header-inner">
-        <span class="eyebrow-light">About Us</span>
-        <h1>Saving lives, one donation at a time</h1>
-        <p>We connect donors, hospitals, and patients to make sure blood is always available when it matters most.</p>
+<!-- ===== PAGE HEADER (DARK RED / BURGUNDY BACKGROUND WITH WELCOME MESSAGE & EMOJI) ===== -->
+<div class="page-header" style="background:linear-gradient(135deg, #3d0a10, #5c1018); padding:70px 32px; text-align:center;">
+    <div class="page-header-inner" style="max-width:700px; margin:0 auto;">
+        <span class="eyebrow" style="display:inline-block; font-size:12px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:#ffccd5; margin-bottom:10px;">Who We Are</span>
+        <h1 style="font-family:'Poppins',sans-serif; font-size:34px; font-weight:800; color:#fff;">About Our Mission ❤️</h1>
+        <p style="color:#f3d1d5; font-size:15px; margin-top:14px; line-height:1.6; font-weight:500;">
+            👋 Welcome to our official platform! We welcome you with an open heart and warm arms. We are dedicated to saving the lives of your people and siblings affected by blood shortages, serving you efficiently, with compassion, and with unwavering commitment.
+        </p>
     </div>
 </div>
 
-<div class="about-section">
-    <div class="about-grid">
-        <div class="about-image">
-            <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=800&q=80" alt="Blood bank team" />
-        </div>
-        <div class="about-text">
-            <span class="eyebrow">Our Mission</span>
-            <h2>Building a reliable blood supply for every community</h2>
-            <p>Blood Bank Management System was founded to close the gap between willing donors and patients in urgent need. We combine technology with compassion to make donating, requesting, and managing blood simple and transparent.</p>
-            <div class="about-points">
-                <div class="about-point"><i class="bi bi-check-circle-fill"></i> Fast, verified blood requests</div>
-                <div class="about-point"><i class="bi bi-check-circle-fill"></i> Real-time inventory tracking</div>
-                <div class="about-point"><i class="bi bi-check-circle-fill"></i> A growing network of registered donors</div>
+<!-- ===== ABOUT MAIN SECTION WITH FULL BACKGROUND IMAGE ===== -->
+<div class="about-section" style="position:relative; padding:80px 32px; overflow:hidden;">
+    
+    <!-- Background Image fully visible -->
+    <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:url('images/blood-bg.jpg') center/cover no-repeat; z-index:0;"></div>
+
+    <div class="about-grid" style="position:relative; z-index:1; max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
+        
+        <!-- Left Side: Image Gallery Collage -->
+        <div class="about-image-collage" style="position:relative; height:420px;">
+            <img src="images/image1.jpg" alt="Blood Donation Camp" style="width:65%; height:240px; object-fit:cover; border-radius:14px; box-shadow:0 10px 25px rgba(0,0,0,0.2); position:absolute; top:0; left:0; z-index:1;" />
+            <img src="images/image2.jpg" alt="Donors Caring" style="width:55%; height:200px; object-fit:cover; border-radius:14px; box-shadow:0 10px 25px rgba(0,0,0,0.25); position:absolute; bottom:0; right:0; z-index:2; border:4px solid #fff;" />
+            <div style="position:absolute; top:110px; right:30px; background:#e11d2e; color:#fff; padding:18px 22px; border-radius:14px; z-index:3; box-shadow:0 8px 20px rgba(225,29,46,0.3);">
+                <h4 style="font-family:'Poppins',sans-serif; font-size:20px; font-weight:800; margin:0;">100%</h4>
+                <span style="font-size:12px; opacity:0.9;">Safe & Verified</span>
             </div>
         </div>
+
+        <!-- Right Side: Text & Features with Dark Navy Blue background wrapper -->
+        <div class="about-text" style="background:#0d1b2a; padding:35px; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.3); border: 1px solid #1b263b;">
+            <span style="font-size:12px; font-weight:700; letter-spacing:1px; color:#ff4d4d; text-transform:uppercase;">Trusted Network</span>
+            <h2 style="font-family:'Poppins',sans-serif; font-size:30px; font-weight:800; color:#ffffff; margin:8px 0 16px; line-height:1.25;">Saving Lives Through Community Action & Care</h2>
+            <p style="color:#e0e1dd; font-size:15px; line-height:1.7; margin-bottom:24px;">Our blood bank platform connects voluntary donors directly with hospitals and patients. We streamline the emergency request workflow to guarantee timely delivery when every single second counts.</p>
+            
+            <div class="about-points" style="display:flex; flex-direction:column; gap:16px;">
+                <div class="about-point" style="display:flex; align-items:center; gap:12px; font-size:15px; color:#ffffff; font-weight:600;">
+                    <i class="bi bi-check-circle-fill" style="color:#ff4d4d; font-size:18px;"></i> Rapid Emergency Response System
+                </div>
+                <div class="about-point" style="display:flex; align-items:center; gap:12px; font-size:15px; color:#ffffff; font-weight:600;">
+                    <i class="bi bi-check-circle-fill" style="color:#ff4d4d; font-size:18px;"></i> Strict Medical Quality & Screening Standards
+                </div>
+                <div class="about-point" style="display:flex; align-items:center; gap:12px; font-size:15px; color:#ffffff; font-weight:600;">
+                    <i class="bi bi-check-circle-fill" style="color:#ff4d4d; font-size:18px;"></i> Dedicated Community of Lifesaving Donors
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
-<div class="about-stats-strip">
-    <div class="about-stats-inner">
-        <div><h3>2,450+</h3><span>Units Available</span></div>
-        <div><h3>1,280+</h3><span>Registered Donors</span></div>
-        <div><h3>980+</h3><span>Requests Fulfilled</span></div>
-        <div><h3>3,500+</h3><span>Lives Saved</span></div>
-    </div>
-</div>
-
-<div class="values-section">
-    <div class="role-heading">
-        <span class="eyebrow">What drives us</span>
-        <h2>Our Core Values</h2>
-    </div>
-    <div class="values-grid">
-        <div class="value-card">
-            <div class="value-icon" style="background:#fde0e0; color:#e11d2e;"><i class="bi bi-heart-fill"></i></div>
-            <h3>Compassion</h3>
-            <p>Every donor and patient is treated with dignity, care, and respect.</p>
+<!-- ===== STATS STRIP ===== -->
+<div class="about-stats-strip" style="background:#f3f5fa; padding:40px 32px;">
+    <div class="about-stats-inner" style="max-width:1000px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); text-align:center; gap:20px;">
+        <div>
+            <h3 style="font-family:'Poppins',sans-serif; font-size:30px; font-weight:800; color:#e11d2e; margin:0 0 4px;">2,450+</h3>
+            <span style="font-size:13px; color:#6b7280; font-weight:500;">Units Available</span>
         </div>
-        <div class="value-card">
-            <div class="value-icon" style="background:#dceaff; color:#2563eb;"><i class="bi bi-shield-check"></i></div>
-            <h3>Safety</h3>
-            <p>Strict screening and handling procedures protect every donation.</p>
+        <div>
+            <h3 style="font-family:'Poppins',sans-serif; font-size:30px; font-weight:800; color:#e11d2e; margin:0 0 4px;">1,280+</h3>
+            <span style="font-size:13px; color:#6b7280; font-weight:500;">Registered Donors</span>
         </div>
-        <div class="value-card">
-            <div class="value-icon" style="background:#dcf5e3; color:#16a34a;"><i class="bi bi-lightning-charge-fill"></i></div>
-            <h3>Speed</h3>
-            <p>We move quickly when every minute counts for a patient in need.</p>
+        <div>
+            <h3 style="font-family:'Poppins',sans-serif; font-size:30px; font-weight:800; color:#e11d2e; margin:0 0 4px;">980+</h3>
+            <span style="font-size:13px; color:#6b7280; font-weight:500;">Requests Fulfilled</span>
         </div>
-        <div class="value-card">
-            <div class="value-icon" style="background:#ece0fb; color:#7c3aed;"><i class="bi bi-people-fill"></i></div>
-            <h3>Community</h3>
-            <p>A growing network of donors who show up for their neighbors.</p>
+        <div>
+            <h3 style="font-family:'Poppins',sans-serif; font-size:30px; font-weight:800; color:#e11d2e; margin:0 0 4px;">3,500+</h3>
+            <span style="font-size:13px; color:#6b7280; font-weight:500;">Lives Saved</span>
         </div>
     </div>
 </div>
 
-<div class="emergency-bar">
-    <div class="emergency-inner">
-        <div class="emergency-item">
-            <div class="emergency-icon"><i class="bi bi-telephone-fill"></i></div>
-            <div><strong>Need Blood Urgently?</strong><p>We're here to help you. Contact us now.</p></div>
+<!-- ===== CORE VALUES SECTION ===== -->
+<div class="values-section" style="padding:80px 32px; background:#fff;">
+    <div class="role-heading" style="max-width:1180px; margin:0 auto 40px; text-align:center;">
+        <span style="font-size:12px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:#e11d2e;">What Drives Us</span>
+        <h2 style="font-family:'Poppins',sans-serif; font-size:30px; font-weight:800; color:#1b2333; margin-top:6px;">Our Core Values</h2>
+    </div>
+
+    <div class="values-grid" style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(4, 1fr); gap:24px;">
+        
+        <div class="value-card" style="background:#fff; border:1px solid #eef0f4; border-radius:16px; padding:28px 22px; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+            <div class="value-icon" style="width:48px; height:48px; border-radius:12px; background:#fde8e8; color:#e11d2e; display:flex; align-items:center; justify-content:center; font-size:20px; margin-bottom:18px;"><i class="bi bi-heart-fill"></i></div>
+            <h3 style="font-family:'Poppins',sans-serif; font-size:17px; font-weight:700; margin-bottom:8px; color:#1b2333;">Compassion</h3>
+            <p style="font-size:13.5px; color:#6b7280; line-height:1.6; margin:0;">Every donor and patient is treated with dignity, care, and utmost respect.</p>
         </div>
-        <div class="emergency-divider"></div>
-        <div class="emergency-item">
-            <div><strong style="font-size:17px;">+252 61 2345678</strong><p>Available 24/7</p></div>
+
+        <div class="value-card" style="background:#fff; border:1px solid #eef0f4; border-radius:16px; padding:28px 22px; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+            <div class="value-icon" style="width:48px; height:48px; border-radius:12px; background:#fde8e8; color:#e11d2e; display:flex; align-items:center; justify-content:center; font-size:20px; margin-bottom:18px;"><i class="bi bi-shield-fill-check"></i></div>
+            <h3 style="font-family:'Poppins',sans-serif; font-size:17px; font-weight:700; margin-bottom:8px; color:#1b2333;">Safety</h3>
+            <p style="font-size:13.5px; color:#6b7280; line-height:1.6; margin:0;">Strict screening and handling procedures protect every single donation.</p>
         </div>
-        <a href="ContactBloodBank.aspx" class="btn-emergency"><i class="bi bi-send-fill"></i> Contact Us</a>
+
+        <div class="value-card" style="background:#fff; border:1px solid #eef0f4; border-radius:16px; padding:28px 22px; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+            <div class="value-icon" style="width:48px; height:48px; border-radius:12px; background:#fde8e8; color:#e11d2e; display:flex; align-items:center; justify-content:center; font-size:20px; margin-bottom:18px;"><i class="bi bi-lightning-fill"></i></div>
+            <h3 style="font-family:'Poppins',sans-serif; font-size:17px; font-weight:700; margin-bottom:8px; color:#1b2333;">Speed</h3>
+            <p style="font-size:13.5px; color:#6b7280; line-height:1.6; margin:0;">We move quickly when every minute counts for a patient in critical need.</p>
+        </div>
+
+        <div class="value-card" style="background:#fff; border:1px solid #eef0f4; border-radius:16px; padding:28px 22px; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+            <div class="value-icon" style="width:48px; height:48px; border-radius:12px; background:#fde8e8; color:#e11d2e; display:flex; align-items:center; justify-content:center; font-size:20px; margin-bottom:18px;"><i class="bi bi-people-fill"></i></div>
+            <h3 style="font-family:'Poppins',sans-serif; font-size:17px; font-weight:700; margin-bottom:8px; color:#1b2333;">Community</h3>
+            <p style="font-size:13.5px; color:#6b7280; line-height:1.6; margin:0;">A growing network of generous donors who always show up for neighbors.</p>
+        </div>
+
     </div>
 </div>
 
+<!-- ===== EMERGENCY BAR ===== -->
+<div class="emergency-bar" style="background:linear-gradient(90deg, #7a1420, #a31d2b); padding:26px 32px;">
+    <div class="emergency-inner" style="max-width:1300px; margin:0 auto; display:flex; align-items:center; gap:34px; color:#fff;">
+        <div class="emergency-item" style="display:flex; align-items:center; gap:14px;">
+            <div class="emergency-icon" style="width:44px; height:44px; border-radius:50%; background:#fff; color:#a31d2b; display:flex; align-items:center; justify-content:center; font-size:17px; flex-shrink:0;"><i class="bi bi-telephone-fill"></i></div>
+            <div><strong>Need Blood Urgently?</strong><p style="font-size:12.5px; opacity:.85; margin:2px 0 0;">We're here to help you. Contact us now.</p></div>
+        </div>
+        <div class="emergency-divider" style="width:1px; height:36px; background:rgba(255,255,255,.25);"></div>
+        <div class="emergency-item" style="display:flex; align-items:center; gap:14px;">
+            <div><strong style="font-size:17px;">+252 61 2345678</strong><p style="font-size:12.5px; opacity:.85; margin:2px 0 0;">Available 24/7</p></div>
+        </div>
+        <a href="ContactBloodBank.aspx" class="btn-emergency" style="margin-left:auto; background:#fff; color:#a31d2b; padding:11px 24px; border-radius:8px; text-decoration:none; font-weight:700; font-size:14px; display:flex; align-items:center; gap:8px;"><i class="bi bi-send-fill"></i> Contact Us</a>
+    </div>
+</div>
 
 </asp:Content>

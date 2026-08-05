@@ -20,22 +20,38 @@
         </div>
     </div>
 
+    <!-- CARDS WITH IMAGES -->
     <div class="hero-stats">
-        <div class="stat-box">
-            <div class="stat-icon" style="background:#fde0e0; color:#e11d2e;"><i class="bi bi-droplet-fill"></i></div>
-            <div><h4>2,450+</h4><span>Units of Blood Available</span></div>
+        <div class="stat-box" style="padding:12px; display:flex; flex-direction:column; gap:10px;">
+            <img src="images/image1.jpg" alt="Image 1" style="width:100%; height:95px; object-fit:cover; border-radius:8px;" />
+            <div style="display:flex; align-items:center; gap:10px;">
+                <div class="stat-icon" style="background:#fde0e0; color:#e11d2e; width:36px; height:36px; font-size:16px;"><i class="bi bi-droplet-fill"></i></div>
+                <div><h4 style="font-size:17px; margin:0;">2,450+</h4><span style="font-size:11px;">Units Available</span></div>
+            </div>
         </div>
-        <div class="stat-box">
-            <div class="stat-icon" style="background:#fde0e0; color:#e11d2e;"><i class="bi bi-people-fill"></i></div>
-            <div><h4>1,280+</h4><span>Registered Donors</span></div>
+
+        <div class="stat-box" style="padding:12px; display:flex; flex-direction:column; gap:10px;">
+            <img src="images/image2.jpg" alt="Image 2" style="width:100%; height:95px; object-fit:cover; border-radius:8px;" />
+            <div style="display:flex; align-items:center; gap:10px;">
+                <div class="stat-icon" style="background:#fde0e0; color:#e11d2e; width:36px; height:36px; font-size:16px;"><i class="bi bi-people-fill"></i></div>
+                <div><h4 style="font-size:17px; margin:0;">1,280+</h4><span style="font-size:11px;">Registered Donors</span></div>
+            </div>
         </div>
-        <div class="stat-box">
-            <div class="stat-icon" style="background:#fde0e0; color:#e11d2e;"><i class="bi bi-clipboard-pulse"></i></div>
-            <div><h4>980+</h4><span>Blood Requests Fulfilled</span></div>
+
+        <div class="stat-box" style="padding:12px; display:flex; flex-direction:column; gap:10px;">
+            <img src="images/image3.jpg" alt="Image 3" style="width:100%; height:95px; object-fit:cover; border-radius:8px;" />
+            <div style="display:flex; align-items:center; gap:10px;">
+                <div class="stat-icon" style="background:#fde0e0; color:#e11d2e; width:36px; height:36px; font-size:16px;"><i class="bi bi-clipboard-pulse"></i></div>
+                <div><h4 style="font-size:17px; margin:0;">980+</h4><span style="font-size:11px;">Requests Fulfilled</span></div>
+            </div>
         </div>
-        <div class="stat-box">
-            <div class="stat-icon" style="background:#fde0e0; color:#e11d2e;"><i class="bi bi-shield-fill-check"></i></div>
-            <div><h4>3,500+</h4><span>Lives Saved</span></div>
+
+        <div class="stat-box" style="padding:12px; display:flex; flex-direction:column; gap:10px;">
+            <img src="images/image4.jpg" alt="Image 4" style="width:100%; height:95px; object-fit:cover; border-radius:8px;" />
+            <div style="display:flex; align-items:center; gap:10px;">
+                <div class="stat-icon" style="background:#fde0e0; color:#e11d2e; width:36px; height:36px; font-size:16px;"><i class="bi bi-shield-fill-check"></i></div>
+                <div><h4 style="font-size:17px; margin:0;">3,500+</h4><span style="font-size:11px;">Lives Saved</span></div>
+            </div>
         </div>
     </div>
 </div>
@@ -109,4 +125,3 @@
 </div>
 
 </asp:Content>
-

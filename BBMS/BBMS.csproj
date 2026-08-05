@@ -81,6 +81,9 @@
     <Content Include="DonorNotifications.aspx" />
     <Content Include="DonorUpdateProfile.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="images\image1.jpg" />
+    <Content Include="images\image2.jpg" />
+    <Content Include="images\image3.jpg" />
     <Content Include="login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="ManageUsers.aspx" />
