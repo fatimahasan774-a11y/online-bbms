@@ -15,13 +15,22 @@ namespace BBMS
     {
 
         /// <summary>
-        /// ddlGroup control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlGroup;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
+
+        /// <summary>
+        /// txtAge control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAge;
 
         /// <summary>
         /// txtWeight control.
@@ -33,22 +42,22 @@ namespace BBMS
         protected global::System.Web.UI.WebControls.TextBox txtWeight;
 
         /// <summary>
-        /// txtLastDonation control.
+        /// ddlBloodGroup control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLastDonation;
+        protected global::System.Web.UI.WebControls.DropDownList ddlBloodGroup;
 
         /// <summary>
-        /// chkAgree control.
+        /// txtLastDonationDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkAgree;
+        protected global::System.Web.UI.WebControls.TextBox txtLastDonationDate;
 
         /// <summary>
         /// btnRegister control.

@@ -12,42 +12,43 @@ namespace BBMS
         {
             if (!IsPostBack)
             {
-                if (Session["Username"] != null)
+                string sessionUser = Session["Username"] != null ? Session["Username"].ToString() :
+                                     (Session["UserEmail"] != null ? Session["UserEmail"].ToString() : "");
+
+                if (!string.IsNullOrEmpty(sessionUser))
                 {
-                    LoadUserData(Session["Username"].ToString());
+                    LoadUserData(sessionUser);
                 }
                 else
                 {
-                    Response.Redirect("Login.aspx");
+                    Response.Redirect("login.aspx");
                 }
             }
         }
 
-        private void LoadUserData(string emailOrUser)
+        private void LoadUserData(string userEmail)
         {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
-                string query = "SELECT FullName, Email, Phone, BloodGroup FROM Users WHERE Email = @Email OR FullName = @Email";
+                // Waxaan isticmaaleynaa Email halkii Username la oran lahaa
+                string query = "SELECT FullName, Email, Phone, BloodGroup FROM Users WHERE Email = @User OR FullName = @User";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@Email", emailOrUser);
+                    cmd.Parameters.AddWithValue("@User", userEmail);
                     conn.Open();
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
-                            txtName.Text = reader["FullName"].ToString();
-                            txtEmail.Text = reader["Email"].ToString();
-                            txtPhone.Text = reader["Phone"].ToString();
+                            txtName.Text = reader["FullName"] != DBNull.Value ? reader["FullName"].ToString() : "";
+                            txtEmail.Text = reader["Email"] != DBNull.Value ? reader["Email"].ToString() : "";
+                            txtPhone.Text = reader["Phone"] != DBNull.Value ? reader["Phone"].ToString() : "";
 
-                            string bloodGroup = reader["BloodGroup"].ToString();
-                            if (ddlBloodGroup.Items.FindByValue(bloodGroup) != null)
+                            string bloodGroup = reader["BloodGroup"] != DBNull.Value ? reader["BloodGroup"].ToString() : "";
+                            if (!string.IsNullOrEmpty(bloodGroup) && ddlBloodGroup.Items.FindByValue(bloodGroup) != null)
                             {
                                 ddlBloodGroup.SelectedValue = bloodGroup;
                             }
-
-                            // Ku kaydi Email-ka saxda ah Session-ka si hadhow loo raaco
-                            Session["UserEmail"] = reader["Email"].ToString();
                         }
                     }
                 }
@@ -56,36 +57,31 @@ namespace BBMS
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-            // Hubi in Session-ka Email-ku jiro
-            string originalEmail = Session["UserEmail"] != null ? Session["UserEmail"].ToString() : txtEmail.Text.Trim();
+            string oldEmail = Session["Username"] != null ? Session["Username"].ToString() : txtEmail.Text.Trim();
 
             using (SqlConnection conn = new SqlConnection(connStr))
             {
-                // Waxaan ku xirnay raadinta Email-kii hore ee saxda ahaa
-                string query = "UPDATE Users SET FullName = @FullName, Email = @NewEmail, Phone = @Phone, BloodGroup = @BloodGroup WHERE Email = @OriginalEmail";
+                string query = "UPDATE Users SET FullName = @FullName, Email = @NewEmail, Phone = @Phone, BloodGroup = @BloodGroup WHERE Email = @OldEmail";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@FullName", txtName.Text.Trim());
                     cmd.Parameters.AddWithValue("@NewEmail", txtEmail.Text.Trim());
                     cmd.Parameters.AddWithValue("@Phone", txtPhone.Text.Trim());
                     cmd.Parameters.AddWithValue("@BloodGroup", ddlBloodGroup.SelectedValue);
-                    cmd.Parameters.AddWithValue("@OriginalEmail", originalEmail);
+                    cmd.Parameters.AddWithValue("@OldEmail", oldEmail);
 
                     conn.Open();
                     int rowsAffected = cmd.ExecuteNonQuery();
 
                     if (rowsAffected > 0)
                     {
-                        // Cusboonaysii Session-ka haddii email-ka la badalay
-                        Session["UserEmail"] = txtEmail.Text.Trim();
                         Session["Username"] = txtEmail.Text.Trim();
-
                         lblMsg.Text = "Profile updated successfully!";
                         lblMsg.ForeColor = System.Drawing.Color.FromArgb(22, 163, 74);
                     }
                     else
                     {
-                        lblMsg.Text = "Error: User not found to update.";
+                        lblMsg.Text = "Error: Could not update profile.";
                         lblMsg.ForeColor = System.Drawing.Color.FromArgb(225, 29, 46);
                     }
                 }

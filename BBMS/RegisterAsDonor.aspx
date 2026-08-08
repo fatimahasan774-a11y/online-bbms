@@ -1,80 +1,92 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User.Master" AutoEventWireup="true" CodeBehind="RegisterAsDonor.aspx.cs" Inherits="BBMS.RegisterAsDonor" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Donar.Master" AutoEventWireup="true" CodeBehind="RegisterAsDonor.aspx.cs" Inherits="BBMS.RegisterAsDonor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        .form-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: 30px auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        .btn-submit {
+            background-color: #e11d48;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .btn-submit:hover {
+            background-color: #be123c;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-   
 
-<div class="dash-wrapper theme-user">
+<div class="form-container">
+    <h3 style="margin-bottom: 25px; color: #0e4f4a; font-weight: 700; text-align: center;">Donor Registration Form</h3>
 
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-        <div class="sidebar-brand">
-            <div class="drop"><i class="bi bi-droplet-fill"></i></div>
-            <div>
-                <h5>BLOOD BANK</h5>
-                <small>USER PANEL</small>
-            </div>
-        </div>
-        <ul class="sidebar-menu">
-            <li><a href="PatientDashboard.aspx"><i class="bi bi-grid-fill"></i> Dashboard</a></li>
-            <li><a href="UpdateProfile.aspx"><i class="bi bi-person"></i> Update Profile</a></li>
-            <li><a href="RegisterAsDonor.aspx" class="active"><i class="bi bi-heart"></i> Register as Donor</a></li>
-            <li><a href="SearchBloodGroup.aspx"><i class="bi bi-search"></i> Search Blood Group</a></li>
-            <li><a href="RequestBlood.aspx"><i class="bi bi-clipboard-plus"></i> Request Blood</a></li>
-            <li><a href="RequestStatus.aspx"><i class="bi bi-list-task"></i> View Request Status</a></li>
-            <li><a href="ContactBloodBank.aspx"><i class="bi bi-chat-dots"></i> Contact Blood Bank</a></li>
-            <li><a href="Login.aspx"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
-        </ul>
+    <div class="form-group">
+        <label>Full Name</label>
+        <asp:TextBox ID="txtName" runat="server" CssClass="form-control" placeholder="Enter your full name"></asp:TextBox>
     </div>
 
-    <!-- MAIN -->
-    <div class="main-content">
-        <div class="topbar">
-            <h3>Register as Donor</h3>
-            <div class="profile-box">
-                <img src="https://i.pravatar.cc/100?img=32" alt="User" />
-                <span>User</span>
-                <i class="bi bi-chevron-down"></i>
-            </div>
-        </div>
+    <div class="form-group">
+        <label>Age</label>
+        <asp:TextBox ID="txtAge" runat="server" CssClass="form-control" TextMode="Number" placeholder="Enter your age"></asp:TextBox>
+    </div>
 
-        <div style="background:#fff; border-radius:14px; padding:24px; box-shadow:0 3px 10px rgba(0,0,0,.05); max-width:560px;">
+    <div class="form-group">
+        <label>Weight (KG)</label>
+        <asp:TextBox ID="txtWeight" runat="server" CssClass="form-control" TextMode="Number" placeholder="Enter your weight in KG"></asp:TextBox>
+    </div>
 
-            <div style="display:flex; align-items:center; gap:14px; margin-bottom:20px; background:#e6f4f1; padding:14px 16px; border-radius:10px;">
-                <i class="bi bi-heart-fill" style="font-size:26px; color:#0e4f4a;"></i>
-                <div style="font-size:13.5px; color:#0e4f4a;">Noqoshadu waxay caawin kartaa in aad badbaadiso nolol. Buuxi form-kan si aad ugu diiwaangashato donor ahaan.</div>
-            </div>
+    <div class="form-group">
+        <label>Blood Group</label>
+        <asp:DropDownList ID="ddlBloodGroup" runat="server" CssClass="form-control">
+            <asp:ListItem Text="Select Blood Group" Value="" />
+            <asp:ListItem Text="A+" Value="A+" />
+            <asp:ListItem Text="A-" Value="A-" />
+            <asp:ListItem Text="B+" Value="B+" />
+            <asp:ListItem Text="B-" Value="B-" />
+            <asp:ListItem Text="AB+" Value="AB+" />
+            <asp:ListItem Text="AB-" Value="AB-" />
+            <asp:ListItem Text="O+" Value="O+" />
+            <asp:ListItem Text="O-" Value="O-" />
+        </asp:DropDownList>
+    </div>
 
-            <div style="margin-bottom:14px;">
-                <label style="font-size:13px; font-weight:600; color:#6b7280;">Blood Group</label><br />
-                <asp:DropDownList ID="ddlGroup" runat="server" style="width:100%; padding:9px; border:1px solid #e5e7eb; border-radius:8px; margin-top:5px;">
-                    <asp:ListItem Text="A+" /><asp:ListItem Text="A-" />
-                    <asp:ListItem Text="B+" /><asp:ListItem Text="B-" />
-                    <asp:ListItem Text="AB+" /><asp:ListItem Text="AB-" />
-                    <asp:ListItem Text="O+" /><asp:ListItem Text="O-" />
-                </asp:DropDownList>
-            </div>
+    <div class="form-group">
+        <label>Last Donation Date</label>
+        <asp:TextBox ID="txtLastDonationDate" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+    </div>
 
-            <div style="margin-bottom:14px;">
-                <label style="font-size:13px; font-weight:600; color:#6b7280;">Weight (kg)</label><br />
-                <asp:TextBox ID="txtWeight" runat="server" TextMode="Number" style="width:100%; padding:9px; border:1px solid #e5e7eb; border-radius:8px; margin-top:5px;" />
-            </div>
+    <div class="form-group">
+        <asp:Button ID="btnRegister" runat="server" Text="Register as Donor" CssClass="btn-submit" OnClick="btnRegister_Click" />
+    </div>
 
-            <div style="margin-bottom:14px;">
-                <label style="font-size:13px; font-weight:600; color:#6b7280;">Last Donation Date (haddii jirto)</label><br />
-                <asp:TextBox ID="txtLastDonation" runat="server" TextMode="Date" style="width:100%; padding:9px; border:1px solid #e5e7eb; border-radius:8px; margin-top:5px;" />
-            </div>
-
-            <div style="margin-bottom:18px;">
-                <asp:CheckBox ID="chkAgree" runat="server" /> <span style="font-size:13px; color:#4b5563;">Waan ogolahay in la ii soo wacdo/la ii soo diro fariin marka la dooranayo hadda dhiigga la iga qabo.</span>
-            </div>
-            <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click"  
-                style="background:#0e4f4a; color:#fff; border:none; padding:11px 22px; border-radius:8px; font-weight:600; cursor:pointer; width:100%;" />
-
-            <asp:Label ID="lblMsg" runat="server" style="display:block; margin-top:12px; font-weight:600;" />
-        </div>
+    <div class="form-group" style="text-align: center;">
+        <asp:Label ID="lblMsg" runat="server" Font-Bold="true"></asp:Label>
     </div>
 </div>
-
 
 </asp:Content>

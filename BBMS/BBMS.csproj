@@ -73,7 +73,7 @@
     <Content Include="ContactBloodBank.aspx" />
     <Content Include="ContactMessages.aspx" />
     <Content Include="Default.aspx" />
-    <Content Include="DonarManagement.aspx" />
+    <Content Include="DonorManagement.aspx" />
     <Content Include="DonateBlood.aspx" />
     <Content Include="DonorDashboard.aspx" />
     <Content Include="DonorEligibility.aspx" />
@@ -107,7 +107,8 @@
     <Content Include="Services.aspx" />
     <Content Include="userLogin.aspx" />
     <Content Include="userLogout.aspx" />
-    <Content Include="UserUpdateProfile.aspx" />
+    <Content Include="UpdateProfile.aspx" />
+    <Content Include="videos\video1.mp4" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -189,12 +190,12 @@
     <Compile Include="Donar.Master.designer.cs">
       <DependentUpon>Donar.Master</DependentUpon>
     </Compile>
-    <Compile Include="DonarManagement.aspx.cs">
-      <DependentUpon>DonarManagement.aspx</DependentUpon>
+    <Compile Include="DonorManagement.aspx.cs">
+      <DependentUpon>DonorManagement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DonarManagement.aspx.designer.cs">
-      <DependentUpon>DonarManagement.aspx</DependentUpon>
+    <Compile Include="DonorManagement.aspx.designer.cs">
+      <DependentUpon>DonorManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="DonateBlood.aspx.cs">
       <DependentUpon>DonateBlood.aspx</DependentUpon>
@@ -354,12 +355,12 @@
     <Compile Include="userLogout.aspx.designer.cs">
       <DependentUpon>userLogout.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserUpdateProfile.aspx.cs">
-      <DependentUpon>UserUpdateProfile.aspx</DependentUpon>
+    <Compile Include="UpdateProfile.aspx.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserUpdateProfile.aspx.designer.cs">
-      <DependentUpon>UserUpdateProfile.aspx</DependentUpon>
+    <Compile Include="UpdateProfile.aspx.designer.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

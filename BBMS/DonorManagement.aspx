@@ -52,11 +52,11 @@
             <table style="width:100%; border-collapse:collapse; font-size:14px;">
                 <thead>
                     <tr style="text-align:left; color:#6b7280; border-bottom:1px solid #eef0f4;">
-                        <th style="padding:10px;">Donor ID</th>
                         <th style="padding:10px;">Full Name</th>
                         <th style="padding:10px;">Blood Group</th>
+                        <th style="padding:10px;">Age</th>
+                        <th style="padding:10px;">Last Donation Date</th>
                         <th style="padding:10px;">Phone</th>
-                        <th style="padding:10px;">City</th>
                         <th style="padding:10px;">Actions</th>
                     </tr>
                 </thead>
@@ -64,7 +64,6 @@
                     <asp:Repeater ID="rptDonors" runat="server">
                         <ItemTemplate>
                             <tr style="border-bottom:1px solid #f4f5f7;">
-                                <td style="padding:12px; font-weight:600; color:#172a4f;">#<%# Eval("DonorId") %></td>
                                 <td style="padding:12px;">
                                     <div style="font-weight:600; color:#1b2333;"><%# Eval("FullName") %></div>
                                     <div style="font-size:12px; color:#9ca3af;"><%# Eval("Email") %></div>
@@ -72,8 +71,9 @@
                                 <td style="padding:12px;">
                                     <span class="badge badge-group"><%# Eval("BloodGroup") %></span>
                                 </td>
+                                <td style="padding:12px;"><%# Eval("Age") %></td>
+                                <td style="padding:12px;"><%# Eval("LastDonationDate", "{0:yyyy-MM-dd}") %></td>
                                 <td style="padding:12px;"><%# Eval("Phone") %></td>
-                                <td style="padding:12px;"><%# Eval("City") %></td>
                                 <td style="padding:12px;">
                                     <a href="#" style="color:#2563eb; margin-right:10px;"><i class="bi bi-pencil-square"></i></a>
                                     <a href="#" style="color:#e11d48;"><i class="bi bi-trash"></i></a>
@@ -89,4 +89,3 @@
 </div>
 
 </asp:Content>
-

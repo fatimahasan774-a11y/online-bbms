@@ -131,6 +131,21 @@
 
     </div>
 </div>
+    <!-- ===== VIDEO SECTION ===== -->
+<div class="video-section" style="padding:90px 32px; background:#0d1b2a; text-align:center;">
+    <div style="max-width:800px; margin:0 auto 40px;">
+        <span style="font-size:12px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:#ffccd5;">Watch Our Story</span>
+        <h2 style="font-family:'Poppins',sans-serif; font-size:32px; font-weight:800; color:#ffffff; margin-top:8px;">See How We Save Lives</h2>
+        <p style="font-size:14px; color:#e0e1dd; margin-top:8px;">A quick look into our blood donation process and community impact.</p>
+    </div>
+
+    <div style="max-width:900px; margin:0 auto; border-radius:24px; overflow:hidden; box-shadow:0 15px 35px rgba(0,0,0,0.5); border:1px solid #1b263b; background:#000;">
+        <video width="100%" controls autoplay muted loop style="display:block; max-height:500px; object-fit:cover;">
+            <source src="videos/video1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
 
 <!-- ===== OUR PROCESS SECTION (MAROON BACKGROUND WITH DARK NAVY CARDS) ===== -->
 <div class="process-section" style="padding:90px 32px; background:linear-gradient(135deg, #3d0a10, #5c1018); text-align:center; border-top:1px solid #6b1620;">
